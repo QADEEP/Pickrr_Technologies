@@ -30,7 +30,7 @@ public class PlaceOrderApiTest {
         //requestSpecification.log().all();
         requestSpecification.multiPart(new File("src/main/resources/lost.csv"));
         MultiPartSpecification multiPartSpecification=new MultiPartSpecificationImpl();
-        requestSpecification.multiPart()
+
 
 
 
