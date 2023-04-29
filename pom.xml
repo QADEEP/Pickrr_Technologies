@@ -85,46 +85,4 @@
 
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.18.1</version>
-                <configuration>
-                    <!--                    <includes>-->
-                    <!--                        <include>*/Test.java</include>-->
-                    <!--                        <include>**/*Test.java</include>-->
-                    <!--                        <include>**/*Tests.java</include>-->
-                    <!--                        <include>**/*Scenario.java</include>-->
-                    <!--                        <include>**/*Scenarios.java</include>-->
-                    <!--                    </includes>-->
-                    <suiteXmlFiles>
-                        <!--<suiteXmlFile>src/test/resources/suites/${suiteXmlFile}</suiteXmlFile>-->
-                    </suiteXmlFiles>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>integration-test</goal>
-                            <goal>verify</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-<!--        <filters>-->
-<!--            <filter>src/main/resources/${build.profile.id}.properties</filter>-->
-<!--        </filters>-->
-    </build>
 </project>
