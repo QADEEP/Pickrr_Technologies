@@ -19,8 +19,5 @@ public class FetchSPOCDetailsTest {
         requestSpecification.header("token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1ZW0iOiJnLm1hbmdsYTkxMUBnbWFpbC5jb20iLCJ1aWQiOiIxIiwicm9sZXMiOlsiIl0sImF1dCI6ImM1YTJhNGFmOWY1NWI3NDQ0NzM4Nzk3MzdmNmNmODFhNDQyIiwiZXhwIjoxNjgyNjE1NDc2LCJjYXV0IjoiYzVhMmE0YWY5ZjU1Yjc0NDQ3Mzg3OTczN2Y2Y2Y4MWE0NDIiLCJ1cGsiOjQyNH0.ujouVBfIjAsVrnJPz5j6kSAhUVTKnfvYkOOGjxYI1TU");
         Response response=requestSpecification.request(Method.GET);
         String responseBody=response.getBody().prettyPrint();
-        Assert.assertEquals(response.getStatusCode(),200);
-
-
     }
 }

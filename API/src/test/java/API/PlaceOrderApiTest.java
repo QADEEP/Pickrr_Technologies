@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 
 public class PlaceOrderApiTest {
-   public PlaceOrderResponse placeOrderResponse;
+    public PlaceOrderResponse placeOrderResponse;
 
     @BeforeMethod
     public void apiUrl(){
@@ -28,12 +28,9 @@ public class PlaceOrderApiTest {
         RequestSpecification requestSpecification=RestAssured.given();
         requestSpecification.header("Content-Type","application/json");
         //requestSpecification.log().all();
-        requestSpecification.multiPart(new File("src/main/resources/lost.csv"));
-        MultiPartSpecification multiPartSpecification=new MultiPartSpecificationImpl();
-
-
-
-
+        // requestSpecification.multiPart(new File("src/main/resources/lost.csv"));
+//        MultiPartSpecification multiPartSpecification=new MultiPartSpecificationImpl();
+//        System.out.println(multiPartSpecification.getHeaders());
 
 
         PlaceOrderPayload placeOrderPayload=new PlaceOrderPayload();
@@ -44,9 +41,9 @@ public class PlaceOrderApiTest {
         response.getBody().prettyPrint();
         placeOrderResponse=new Gson().fromJson(response.getBody().asString(),PlaceOrderResponse.class);
         System.out.println(placeOrderResponse.getOrderId());
-        }
-        @Test(priority = 1)
-         public void verifyClientId(){
-            System.out.println(placeOrderResponse.getClientOrderId());
-        }
     }
+    @Test(priority = 1)
+    public void verifyClientId(){
+        System.out.println(placeOrderResponse.getClientOrderId());
+    }
+}
