@@ -5,7 +5,6 @@ import Actions.LoginPageActions;
 import Actions.NDROverviewActions;
 import Actions.SignupActions;
 import Base.BrowserInstantiate;
-import Utils.BaseClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +14,7 @@ import static Base.BrowserInstantiate.driver;
 import static Base.BrowserInstantiate.getDriver;
 
 
-public class NDROverviewPageTest extends BaseClass {
+public class NDROverviewPageTest {
 
     @BeforeClass
     public void init(){

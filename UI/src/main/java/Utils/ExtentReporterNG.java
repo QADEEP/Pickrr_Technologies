@@ -1,23 +1,11 @@
-package Utils;//package Utils;
-//
-//import com.aventstack.extentreports.ExtentReports;
-//import com.aventstack.extentreports.ExtentTest;
-//import com.aventstack.extentreports.Status;
-//import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-//import org.testng.IReporter;
-//import org.testng.ISuite;
-//import org.testng.xml.XmlSuite;
-//
-//import java.io.IOException;
-//import java.text.DateFormat;
-//import java.text.SimpleDateFormat;
-//import java.util.*;
-//
+//package Utils;
+
+
 //public class ExtentReporterNG implements IReporter {
-//
-//    static String methodName;
-//
-//    static Calendar cal = Calendar.getInstance();
+
+  //  static String methodName;
+
+   //static Calendar cal = Calendar.getInstance();
 //    static SimpleDateFormat FormatDateValue = new SimpleDateFormat("MM-dd-yyyy hh-mm-ss a");
 //
 //    Date date = new Date();

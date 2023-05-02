@@ -5,7 +5,7 @@ import Actions.HomePageActions;
 import Actions.LoginPageActions;
 import Actions.SignupActions;
 import Base.BrowserInstantiate;
-import Utils.BaseClass;
+//import Utils.BaseClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import static Base.BrowserInstantiate.*;
 
-public class CreateSingleOrderTest extends BaseClass {
+public class CreateSingleOrderTest {
 
     CreateSingleOrderActions createSingleOrderActions;
     HomePageActions homePageActions;

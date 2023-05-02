@@ -16,5 +16,69 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.xmljim.json</groupId>
+            <artifactId>jsonfactory</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+    </dependencies>
 
 </project>
