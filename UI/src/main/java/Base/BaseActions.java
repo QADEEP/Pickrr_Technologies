@@ -56,13 +56,14 @@ public class BaseActions {
 
     }
     public static void clearAndSendKeys(WebDriver driver, By element, String text){
-        driver.findElement(element).sendKeys(text);
+        driver.findElement(element).clear();
+
         try{
             Thread.sleep(1000);
         }catch(InterruptedException e){
             throw new RuntimeException(e);
         }
-        driver.findElement(element).clear();
+        driver.findElement(element).sendKeys(text);
     }
 
 }

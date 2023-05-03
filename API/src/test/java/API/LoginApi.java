@@ -20,11 +20,13 @@ public class LoginApi {
 
         RequestSpecification requestSpecification= RestAssured.given();
         requestSpecification.header("Content-Type","application/json");
-
+        requestSpecification.params("","");
         String requestBody=new Gson().toJson(loginApiRequest);
-        requestSpecification.body(requestBody);
+        //System.out.println(requestSpecification.body(requestBody));
 
         Response response=requestSpecification.post();
+        System.out.println(response);
+
 
         LoginResponse loginApiResponse=new Gson().fromJson(response.getBody().asString(), LoginResponse.class);
         System.out.println(loginApiResponse.getToken());

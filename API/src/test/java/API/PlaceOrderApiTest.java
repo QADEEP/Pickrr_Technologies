@@ -5,6 +5,7 @@ import APIPayloads.PlaceOrderPayload;
 import ApiResponse.PlaceOrderResponse;
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
@@ -33,13 +34,18 @@ public class PlaceOrderApiTest {
         requestSpecification.body(new Gson().toJson(PlaceOrderPayload
                 .placeOrderSetBody(LoginApi.loginAndReturnObject().getAuth_token()))).log().all();
         Response response=requestSpecification.post();
-        Assert.assertEquals(response.getStatusCode(),400);
+        System.out.println(response);
+        JsonPath jsonPath=response.jsonPath();
+        Assert.assertEquals(response.getStatusCode(),200);
         response.getBody().prettyPrint();
+        String trackingId=jsonPath.getString("tracking_id");
+        System.out.println(trackingId);
+     //   Assert.assertEquals(trackingId,"14393571159628");
         placeOrderResponse=new Gson().fromJson(response.getBody().asString(),PlaceOrderResponse.class);
-        System.out.println(placeOrderResponse.getOrderId());
+       // System.out.println(placeOrderResponse.getOrderId());
     }
 //    @Test(priority = 1)
 //    public void verifyClientId(){
 //        System.out.println(placeOrderResponse.getClientOrderId());
-//    }
+//    }  t
 }
