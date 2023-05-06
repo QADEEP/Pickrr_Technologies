@@ -1,6 +1,6 @@
 package base;
 
-import Reporting.Reporter;
+import reporting.Reporter;
 import com.aventstack.extentreports.Status;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;

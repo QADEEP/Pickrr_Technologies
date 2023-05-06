@@ -1,6 +1,6 @@
 package listeners;
 
-import Reporting.Reporter;
+import reporting.Reporter;
 import base.BaseTest;
 import org.testng.*;
 

@@ -1,4 +1,4 @@
-package Reporting;
+package reporting;
 
 
 import com.aventstack.extentreports.ExtentReports;
@@ -11,6 +11,9 @@ public class Reporter  {
     public static ExtentSparkReporter sparkReporter;
     public static ExtentTest extentTest;
 
+    public static ExtentTest getExtentTest() {
+        return extentTest;
+    }
     public static void setExtentTest(String testcaseName) {
         extentTest = extentReports.createTest(testcaseName);
     }
@@ -32,7 +35,6 @@ public class Reporter  {
 
     public static void setTestcaseStatus(Status logStatus, String description, String testMethodName) {
         String path="./screenShot/"+ testMethodName + ".png";
-        //String path = "./Screenshots/"+ testMethodName + ".png";
         if (logStatus.toString().equalsIgnoreCase("PASS")) {
             extentTest.pass("pass");
             extentTest.log(logStatus, "<b><font face=\"Courier New\" color = \"green\">" + description + "</font></b>");
@@ -46,28 +48,17 @@ public class Reporter  {
             extentTest.log(logStatus, "<b><font face=\"Courier New\" color = \"blue\">" + description + "</font></b>");
         }
     }
-
-    public static ExtentTest getExtentTest() {
-        return extentTest;
-    }
-
-
-
     public static void init() {
         if (extentReports == null) {
             extentReports = new ExtentReports();
             sparkReporter = new ExtentSparkReporter("reports/ExtentReport.html");
             extentReports.attachReporter(sparkReporter);
             System.out.println(sparkReporter.getFile());
-            sparkReporter.config().setReportName("Sanity Report");
+            sparkReporter.config().setReportName("Deep Chand");
             sparkReporter.config().setDocumentTitle("UI Extent Report");
         }
-
-
     }
     public static void generateReport(){
-
         extentReports.flush();
     }
-
 }
