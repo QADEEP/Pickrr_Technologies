@@ -1,17 +1,17 @@
 package API;
 
-import APIRequest.LoginRequest;
-import ApiResponse.LoginResponse;
+import apiRequest.LoginRequest;
+import apiResponse.LoginResponse;
+import utils.ExcelDataProvider;
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.testng.annotations.Test;
 
 public class LoginApi {
-    public static void main(String[] args) {
-        loginAndReturnObject();
-    }
-    public static LoginResponse loginAndReturnObject(){
+   @Test(dataProvider = "excelData", dataProviderClass = ExcelDataProvider.class)
+    public  LoginResponse loginAndReturnObject(){
         RestAssured.baseURI="https://pickrr.com";
         RestAssured.basePath="/api/v1/web-login/";
         LoginRequest loginApiRequest=new LoginRequest();
@@ -25,7 +25,7 @@ public class LoginApi {
         //System.out.println(requestSpecification.body(requestBody));
 
         Response response=requestSpecification.post();
-        System.out.println(response);
+       // System.out.println(response);
 
 
         LoginResponse loginApiResponse=new Gson().fromJson(response.getBody().asString(), LoginResponse.class);

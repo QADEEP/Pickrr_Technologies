@@ -1,19 +1,19 @@
 package UI;
 
-import Actions.ParaSignupActions;
-import Base.BrowserInstantiate;
+import actions.ParaSignupActions;
+import base.BaseTest;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static Base.BrowserInstantiate.getDriver;
+import static base.BaseTest.getDriver;
 
 public class ParaSignupTest {
     ParaSignupActions paraSignupActions;
     @BeforeMethod
     public void init(){
-        BrowserInstantiate.initializeProperties();
-        BrowserInstantiate.initializeBrowser();
+        BaseTest.initializeProperties();
+        BaseTest.initializeBrowser();
         paraSignupActions=new ParaSignupActions(getDriver());
     }
 

@@ -1,17 +1,17 @@
 package UI;
 
-import Actions.CreateSingleOrderActions;
-import Actions.HomePageActions;
-import Actions.LoginPageActions;
-import Actions.SignupActions;
-import Base.BrowserInstantiate;
+import actions.CreateSingleOrderActions;
+import actions.HomePageActions;
+import actions.LoginPageActions;
+import actions.SignupActions;
+import base.BaseTest;
 //import Utils.BaseClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static Base.BrowserInstantiate.*;
+import static base.BaseTest.*;
 
 public class CreateSingleOrderTest {
 
@@ -19,8 +19,8 @@ public class CreateSingleOrderTest {
     HomePageActions homePageActions;
     @BeforeClass
     public void init(){
-        BrowserInstantiate.initializeProperties();
-        BrowserInstantiate.initializeBrowser();
+        BaseTest.initializeProperties();
+        BaseTest.initializeBrowser();
         createSingleOrderActions=new CreateSingleOrderActions(getDriver());
     }
     @BeforeMethod
@@ -32,7 +32,7 @@ public class CreateSingleOrderTest {
      @Test
     public void createSingleOrder(){
 
-    homePageActions=new Actions.HomePageActions(getDriver());
+    homePageActions=new actions.HomePageActions(getDriver());
     homePageActions.closeAdPopOnHomePage();
     createSingleOrderActions.hoverOnOrdersTabAndClickOnCreateOderTab();
     createSingleOrderActions.enterName("test");

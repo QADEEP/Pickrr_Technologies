@@ -1,6 +1,6 @@
 package API;
 
-import APIPayloads.DemoblazeAddToCartPayload;
+import apiPayloads.DemoblazeAddToCartPayload;
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

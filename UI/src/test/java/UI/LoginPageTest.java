@@ -1,47 +1,47 @@
 package UI;
 
-import Actions.LoginPageActions;
-import Actions.SignupActions;
-import Utils.ExtentReportManager;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import actions.LoginPageActions;
+import actions.SignupActions;
+import base.BaseTest;
+import org.testng.Assert;
+import org.testng.SkipException;
+import org.testng.annotations.*;
 
-import static Base.BrowserInstantiate.*;
+@Listeners(listeners.Listeners.class)
+public class LoginPageTest extends BaseTest {
 
-public class LoginPageTest  {
-
-    public static ExtentReports extentReports;
-    public static ExtentSparkReporter sparkReporter;
-    public static ExtentTest extentTest;
     public LoginPageActions loginPageActions;
+
 
     @BeforeClass
     public void init() {
     initializeProperties();
     initializeBrowser();
     loginPageActions=new LoginPageActions(getDriver());
-        extentReports=ExtentReportManager.getReport();
-        extentTest=extentReports.createTest("Login Page Test");
 
     }
 
     @Test
     public void loginUser() throws Exception {
-        extentTest.log(Status.INFO,"Starting logged in test case.");
+
         new SignupActions(driver).clickOnLoginButton();
-        extentTest.log(Status.INFO,"Clicked on login button");
+
         loginPageActions.moveToLoginFormAndLogin();
-        extentTest.log(Status.INFO,"Moved to login page");
     }
 
-    @AfterMethod
-    public void tearDown() {
-        extentReports.flush();
-        getDriver().quit();
+    @Test
+    public void loginUser1() throws Exception {
+        new SignupActions(driver).clickOnLoginButton();
+        loginPageActions.moveToLoginFormAndLogin();
     }
+    @Test
+    public void loginUser2() throws Exception {
+        System.out.println("pass ho gya to !!");
+
+    }
+    @Test
+    public void loginUser3() throws Exception {
+        throw new SkipException("skip ho ja ");
+    }
+
 }

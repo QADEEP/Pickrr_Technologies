@@ -1,14 +1,14 @@
 package UI;
 
-import Actions.HomePageActions;
-import Actions.LoginPageActions;
-import Actions.SignupActions;
+import actions.HomePageActions;
+import actions.LoginPageActions;
+import actions.SignupActions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static Base.BrowserInstantiate.*;
+import static base.BaseTest.*;
 public class HomePageTest  {
     HomePageActions homePageActions;
     @BeforeClass

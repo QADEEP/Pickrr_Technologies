@@ -1,8 +1,8 @@
 package UI;
 
-import Actions.LoginPageActions;
-import Actions.SignupActions;
-import Base.BrowserInstantiate;
+import actions.LoginPageActions;
+import actions.SignupActions;
+import base.BaseTest;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -10,15 +10,15 @@ import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.Set;
 
-import static Base.BrowserInstantiate.*;
+import static base.BaseTest.*;
 
 public class SignupPageTest  {
     LoginPageActions loginPageActions;
     SignupActions signupActions;
     @BeforeClass
     public void init(){
-        BrowserInstantiate.initializeProperties();
-        BrowserInstantiate.initializeBrowser();
+        BaseTest.initializeProperties();
+        BaseTest.initializeBrowser();
         signupActions=new SignupActions(getDriver());
     }
     @Test
