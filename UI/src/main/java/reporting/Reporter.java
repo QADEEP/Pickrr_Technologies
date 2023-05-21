@@ -5,6 +5,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Reporter  {
     public static ExtentReports extentReports;
@@ -56,6 +57,7 @@ public class Reporter  {
             System.out.println(sparkReporter.getFile());
             sparkReporter.config().setReportName("Deep Chand");
             sparkReporter.config().setDocumentTitle("UI Extent Report");
+            sparkReporter.config().setTheme(Theme.DARK);
         }
     }
     public static void generateReport(){

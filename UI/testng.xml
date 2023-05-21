@@ -7,7 +7,7 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="UI Login Testcase">
         <classes>
-            <class name="UI.LoginPageTest"><methods><include name="loginUser"/></methods></class>
+            <class name="UI.Pickrr.LoginPageTest"><methods><include name="loginUser"/></methods></class>
         </classes>
     </test>
 </suite>

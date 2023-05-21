@@ -13,6 +13,8 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.SheetsScopes;
 import com.google.api.services.sheets.v4.model.ValueRange;
+import org.testng.annotations.DataProvider;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,7 +25,7 @@ import java.util.List;
 
 public class SheetsQuickstart {
   private static final String APPLICATION_NAME = "Google Sheets API Java Quickstart";
-  private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
+  public static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
   private static final String TOKENS_DIRECTORY_PATH = "tokens";
 
   /**
@@ -41,6 +43,7 @@ public class SheetsQuickstart {
    * @return An authorized Credential object.
    * @throws IOException If the credentials.json file cannot be found.
    */
+  //@DataProvider(name = "getDifferentCourierCodes")
   private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT)
       throws IOException {
     // Load client secrets.
@@ -81,9 +84,8 @@ public class SheetsQuickstart {
     if (values == null || values.isEmpty()) {
       System.out.println("No data found.");
     } else {
-      System.out.println("Name, Major");
+     // System.out.println("Name, Major");
       for (List row : values) {
-        // Print columns A and E, which correspond to indices 0 and 4.
         System.out.printf("%s, %s\n", row.get(0), row.get(1));
       }
     }

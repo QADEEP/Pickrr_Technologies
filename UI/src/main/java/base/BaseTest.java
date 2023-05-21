@@ -1,5 +1,6 @@
 package base;
 
+import org.openqa.selenium.JavascriptExecutor;
 import reporting.Reporter;
 import com.aventstack.extentreports.Status;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -74,6 +75,7 @@ public class BaseTest {
                 System.setProperty("webdriver.http.factory", "jdk-http-client");
                 log.info("Browser setup complete");
                 driver=new ChromeDriver();
+                JavascriptExecutor js=(JavascriptExecutor)driver;
                 driver.manage().window().maximize();
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
