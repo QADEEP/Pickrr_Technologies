@@ -34,7 +34,7 @@ public class SheetsQuickstart {
    */
   private static final List<String> SCOPES =
       Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
-  private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
+  private static final String CREDENTIALS_FILE_PATH = "/client.json";
 
   /**
    * Creates an authorized Credential object.
@@ -71,8 +71,8 @@ public class SheetsQuickstart {
   public static void main(String... args) throws IOException, GeneralSecurityException {
     // Build a new authorized API client service.
     final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
-    final String spreadsheetId = "1cER2cr3kTUlN55EKNd28PMdGQFqNLY_DTgtvvp3ICic";
-    final String range = "TestDataSheet!A2:B";
+    final String spreadsheetId = "1Hm8A01D66VQI-0cpr8FqEsqg04sNU3RJ0uuYcmX9ZYA";
+    final String range = "TestSheet!A1:B5";
     Sheets service =
         new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
             .setApplicationName(APPLICATION_NAME)

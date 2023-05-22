@@ -1,4 +1,4 @@
-package API.FreshWork;
+package API.Dummy;
 
 import java.util.Arrays;
 
@@ -33,4 +33,5 @@ public class WorkflowAutomation {
             return 1;
         }
     }
+
 }
