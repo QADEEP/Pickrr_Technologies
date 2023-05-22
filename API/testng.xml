@@ -3,13 +3,13 @@
 <suite name="All Test Suite">
     <listeners>
         <listener
-                class-name="Utils.ExtentReportManager"/>
+                class-name="utils.ExtentReportManager"/>
     </listeners>
     <test verbose="2" preserve-order="true" name="/Users/pickrr/IdeaProjects/Pickrr_Technologies">
         <classes>
-            <class name="API.LoginApi"><methods><include name="createSingleOrder"/></methods></class>
-            <class name="API.PlaceOrderApiTest"><methods><include name="rechargeFromHomePage"/></methods></class>
-            <class name="API.FetchSPOCDetailsTest"><methods><include name="loginUser"/></methods></class>
+            <class name="API.Pickrr.LoginApi"><methods><include name="createSingleOrder"/></methods></class>
+            <class name="API.Pickrr.PlaceOrderApiTest"><methods><include name="rechargeFromHomePage"/></methods></class>
+            <class name="API.Pickrr.FetchSPOCDetailsTest"><methods><include name="loginUser"/></methods></class>
         </classes>
     </test>
 </suite>

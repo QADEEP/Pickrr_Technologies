@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <listeners>
-        <listener class-name="Utils.ExtentReportManager"/>
+        <listener class-name="listeners.Listeners"/>
     </listeners>
     <test verbose="2" preserve-order="true" name="/Users/pickrr/IdeaProjects/Pickrr_Technologies">
     <classes>
-        <class name="UI.CreateSingleOrderTest"><methods><include name="createSingleOrder"/></methods></class>
-        <class name="UI.HomePageTest"><methods><include name="rechargeFromHomePage"/></methods></class>
-        <class name="UI.LoginPageTest"><methods><include name="loginUser"/></methods></class>
+        <class name="UI.Pickrr.CreateSingleOrderTest"><methods><include name="createSingleOrder"/></methods></class>
+        <class name="UI.Pickrr.HomePageTest"><methods><include name="rechargeFromHomePage"/></methods></class>
+        <class name="UI.Pickrr.LoginPageTest"><methods><include name="loginUser"/></methods></class>
     </classes>
     </test>
     </suite>
